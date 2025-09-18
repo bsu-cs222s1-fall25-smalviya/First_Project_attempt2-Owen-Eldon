@@ -1,0 +1,39 @@
+{
+  "continue": {
+    "rvcontinue": "20230827162016|1172518095",
+    "continue": "||"
+  },
+  "query": {
+    "redirects": [
+      {
+        "from": "lebron",
+        "to": "LeBron James"
+      }
+    ],
+    "pages": {
+      "240940": {
+        "pageid": 240940,
+        "ns": 0,
+        "title": "LeBron James",
+        "revisions": [
+          {
+            "user": "Bagumba",
+            "timestamp": "2025-09-15T04:37:00Z"
+          },
+          {
+            "user": "MisterE727",
+            "timestamp": "2025-09-15T04:19:00Z"
+          },
+          {
+            "user": "AnomieBOT",
+            "timestamp": "2025-09-07T10:46:00Z"
+          },
+          {
+            "user": "Tpbradbury",
+            "timestamp": "2025-09-07T10:25:00Z"
+          }
+        ]
+      }
+    }
+  }
+}
