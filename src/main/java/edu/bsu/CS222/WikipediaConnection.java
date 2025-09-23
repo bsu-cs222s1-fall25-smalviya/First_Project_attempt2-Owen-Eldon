@@ -1,4 +1,4 @@
-package edu.bsu.CS222.wikipedia;
+package edu.bsu.CS222;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;

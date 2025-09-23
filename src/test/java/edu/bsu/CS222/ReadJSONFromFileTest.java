@@ -1,15 +1,16 @@
-package edu.bsu.CS222.wikipedia;
+package edu.bsu.CS222;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
 import java.util.Objects;
 
-import jdk.internal.jshell.tool.StopDetectingInputStream;
+import com.jayway.jsonpath.JsonPath;
+import net.minidev.json.JSONArray;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ReadJsonFromFileTest {
+public class ReadJSONFromFileTest {
 
     @Test
     public void testAccessToJsonFile() throws IOException {
@@ -20,9 +21,8 @@ public class ReadJsonFromFileTest {
     @Test
     public void testCountRevisionsWithJsonPath() throws IOException {
         String jsonData = readSampleFileAsString();
-        RevisionFormatter revisions = getRevisionsFromJson(jsonData);
-        Assertions.assertEquals(4,
-                revisions.size());
+        JSONArray revisions = getRevisionsFromJson(jsonData);
+        Assertions.assertEquals(4, revisions.size());
     }
 
     private String readSampleFileAsString() throws NullPointerException, IOException {
@@ -31,8 +31,7 @@ public class ReadJsonFromFileTest {
         return new String(Objects.requireNonNull(sampleFile).readAllBytes(), Charset.defaultCharset());
     }
 
-    private RevisionFormatter getRevisionsFromJson(String jsonData) {
-        StopDetectingInputStream JsonPath = null;
+    private JSONArray getRevisionsFromJson(String jsonData) {
         return JsonPath.read(jsonData, "$..revisions[*]");
     }
 
